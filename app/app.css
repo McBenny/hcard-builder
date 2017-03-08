@@ -1,25 +1,134 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body {
+    color: #394f63;
 }
-
-.menu:before {
-  content: "[";
+.hcard {
+    padding: 1rem 1rem 2rem 2rem;
 }
-
-.menu:after {
-  content: "]";
+.hcard__title {
+    font-size: 1.75rem;     /*  28px */
 }
-
-.menu > li {
-  display: inline;
+    .hcard__title--preview {
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        font-weight: 300;
+        color: #a5b4b5;
+    }
+.hcard__line {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e6e8;
 }
+.hcard__form-group {
+    margin-top: 2rem;
+}
+.hcard__legend {
+    text-transform: uppercase;
+    font-size: 0.625rem;
+    color: #bdc5c8;
+}
+.hcard__label {
+    margin: 1rem 0 0;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #999;
+}
+    .hcard__label--file {
+        margin-top: 0;
+        width: 100%;
+        box-shadow: 0 2px 0 #506470;
+        background: #758e9d;
+        padding: 6px 12px;
+        text-align: center;
+        text-transform: none;
+        font-size: 1.25rem;
+        color: #fff;
+    }
+.hcard__input {
+    font-family: serif;
+    font-size: 1.25rem;
+}
+    .hcard__input--cap {
+        text-transform: capitalize;
+    }
+    .hcard__input--upper {
+        text-transform: uppercase;
+    }
+.hcard__btn {
+    width: 100%;
+    box-shadow: 0 2px 0 #506470;
+    background: #758e9d;
+    font-size: 1.25rem;
+    color: #fff;
+}
+    .hcard__btn--file {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+    .hcard__btn--submit {
+        box-shadow: 0 2px 0 #3193c6;
+        background: #3fa9e2;
+    }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+
+.hcard-preview {
+    box-shadow: 0 2px 0 #aaa;
+}
+.hcard-preview__side {
+    background: #e7e9ec;
+    padding: 4rem 2rem 0;
+}
+.hcard-preview__name {
+    position: relative;
+    min-height: 6.5rem;
+    background: #394f63;
+    padding: 3.5rem 0 0 1.5rem;
+    font-family: serif;
+    font-size: 1.625rem;
+    color: #fff;
+}
+.hcard-preview__avatar {
+    position: absolute;
+    bottom: -1rem;
+    right: 1rem;
+}
+.hcard-preview__img {
+    max-width: 84px;
+    max-height: 104px;
+}
+.hcard-preview__data {
+    background: #fff;
+    padding: 1.5rem;
+}
+.hcard-preview__label {
+    display: inline-block;
+    padding-top: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.625rem;
+    color: #394f63;
+}
+.hcard-preview__content {
+    display: inline-block;
+    min-height: 1.2rem;
+    line-height: 1.1em;
+    font-family: serif;
+    font-size: 1.375rem;
+    font-weight: 100;
+}
+    .hcard-preview__content--cap {
+        text-transform: capitalize;
+    }
+    .hcard-preview__content--upper {
+        text-transform: uppercase;
+    }
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
 }

@@ -1,1 +1,155 @@
-<p>This is the partial for view 1.</p>
+<div class="container">
+    <div class="row row-eq-height">
+        <div class="col-md-6">
+            <div class="hcard">
+                <h1 class="hcard__title">hCard Builder</h1>
+                <form action="#" class="hcard__form">
+                    <fieldset class="hcard__form-group">
+                        <legend class="hcard__legend hcard__line">
+                            Personal details
+                        </legend>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label for="name" class="hcard__label">Given name</label>
+                                <input type="text" class="hcard__input  form-control" id="name" name="name" data-ng-model="myApp.name" />
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="surname" class="hcard__label">Surname</label>
+                                <input type="text" class="hcard__input  form-control" id="surname" name="surname" data-ng-model="myApp.surname" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label for="email" class="hcard__label">Email</label>
+                                <input type="email" class="hcard__input  form-control" id="email" name="email" data-ng-model="myApp.email" />
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="phone" class="hcard__label">Phone</label>
+                                <input type="text" class="hcard__input  form-control" id="phone" name="phone" maxlength="10" data-ng-model="myApp.phone" />
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="hcard__form-group">
+                        <legend class="hcard__legend hcard__line">
+                            Address
+                        </legend>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label for="house" class="hcard__label">House name or #</label>
+                                <input type="text" class="hcard__input  form-control" id="house" name="house" data-ng-model="myApp.house" />
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="street" class="hcard__label">Street</label>
+                                <input type="text" class="hcard__input  form-control" id="street" name="street" data-ng-model="myApp.street" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label for="suburb" class="hcard__label">Suburb</label>
+                                <input type="text" class="hcard__input hcard__input--cap  form-control" id="suburb" name="suburb" data-ng-model="myApp.suburb" />
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="state" class="hcard__label">State</label>
+                                <input type="text" class="hcard__input hcard__input--upper  form-control" id="state" name="state" data-ng-model="myApp.state" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label for="postcode" class="hcard__label">Postcode</label>
+                                <input type="text" class="hcard__input  form-control" id="postcode" name="postcode" data-ng-model="myApp.postcode" />
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="country" class="hcard__label">Country</label>
+                                <input type="text" class="hcard__input  form-control" id="country" name="country" data-ng-model="myApp.country" />
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="hcard__form-group">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <input type="file" class="hcard__btn hcard__btn--file  btn" id="upload" />
+                                <label for="upload" class="hcard__label hcard__label--file  btn">Upload Avatar</label>
+                            </div>
+                            <div class="col-xs-6">
+                                <button type="submit" class="hcard__btn hcard__btn--submit  btn">Create hCard</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="hcard-preview__side  col-md-6">
+            <div class="hcard-preview  vcard">
+                <h2 class="hcard__title hcard__title--preview  text-right">Hcard preview</h2>
+                <div class="hcard-preview__name">
+                    <span class="n"><span class="given-name">{{myApp.name}}</span> <span class="family-name">{{myApp.surname}}</span></span>
+                    <div class="hcard-preview__avatar">
+                        <img src="images/avatar.png" alt="{{myApp.name}} {{myApp.surname}}" class="hcard-preview__img" id="avatar" />
+                    </div>
+                </div>
+                <div class="hcard-preview__data">
+                    <div class="hcard__line">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <span class="hcard-preview__label">Email</span>
+                            </div>
+                            <div class="col-xs-9">
+                                <span class="hcard-preview__content email">{{myApp.email}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hcard__line">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <span class="hcard-preview__label">Phone</span>
+                            </div>
+                            <div class="col-xs-9">
+                                <span class="hcard-preview__content tel">{{myApp.phone | tel}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adr">
+                        <div class="hcard__line">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <span class="hcard-preview__label">Address</span>
+                                </div>
+                                <div class="col-xs-9">
+                                    <span class="hcard-preview__content street-address">{{myApp.house}} {{myApp.street}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hcard__line">
+                            <div class="row">
+                                <div class="col-xs-3"></div>
+                                <div class="col-xs-9">
+                                    <span class="hcard-preview__content hcard-preview__content--cap locality">{{(myApp.suburb.length > 0 && myApp.state.length > 0) ? myApp.suburb + ',&nbsp;' : myApp.suburb}}</span><span class="hcard-preview__content hcard-preview__content--upper region">{{myApp.state}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hcard__line">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <span class="hcard-preview__label">Postcode</span>
+                                </div>
+                                <div class="col-xs-9">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <span class="hcard-preview__content postal-code">{{myApp.postcode}}</span>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <span class="hcard-preview__label">Country</span>
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <span class="hcard-preview__content country-name">{{myApp.country}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
