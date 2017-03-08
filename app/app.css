@@ -4,7 +4,7 @@ body {
     color: #394f63;
 }
 .hcard {
-    padding: 1rem 1rem 2rem 2rem;
+    padding: 2rem;
 }
 .hcard__title {
     font-size: 1.75rem;     /*  28px */
@@ -81,7 +81,7 @@ body {
 }
 .hcard-preview__side {
     background: #e7e9ec;
-    padding: 4rem 2rem 0;
+    padding: 5rem 2rem 2rem;
 }
 .hcard-preview__name {
     position: relative;
@@ -126,9 +126,12 @@ body {
     .hcard-preview__content--upper {
         text-transform: uppercase;
     }
-.row-eq-height {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display:         flex;
+
+.container {
+    margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+    .btn {
+        margin-top: 1rem;
+    }
 }

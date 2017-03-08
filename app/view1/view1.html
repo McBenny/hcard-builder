@@ -1,84 +1,82 @@
 <div class="container">
-    <div class="row row-eq-height">
-        <div class="col-md-6">
-            <div class="hcard">
-                <h1 class="hcard__title">hCard Builder</h1>
-                <form action="#" class="hcard__form">
-                    <fieldset class="hcard__form-group">
-                        <legend class="hcard__legend hcard__line">
-                            Personal details
-                        </legend>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <label for="name" class="hcard__label">Given name</label>
-                                <input type="text" class="hcard__input  form-control" id="name" name="name" data-ng-model="myApp.name" />
-                            </div>
-                            <div class="col-xs-6">
-                                <label for="surname" class="hcard__label">Surname</label>
-                                <input type="text" class="hcard__input  form-control" id="surname" name="surname" data-ng-model="myApp.surname" />
-                            </div>
+    <div class="row">
+        <div class="hcard  col-md-6" id="hcard">
+            <h1 class="hcard__title">hCard Builder</h1>
+            <form action="#" class="hcard__form">
+                <fieldset class="hcard__form-group">
+                    <legend class="hcard__legend hcard__line">
+                        Personal details
+                    </legend>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="name" class="hcard__label">Given name</label>
+                            <input type="text" class="hcard__input  form-control" id="name" name="name" data-ng-model="myApp.name" />
                         </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <label for="email" class="hcard__label">Email</label>
-                                <input type="email" class="hcard__input  form-control" id="email" name="email" data-ng-model="myApp.email" />
-                            </div>
-                            <div class="col-xs-6">
-                                <label for="phone" class="hcard__label">Phone</label>
-                                <input type="text" class="hcard__input  form-control" id="phone" name="phone" maxlength="10" data-ng-model="myApp.phone" />
-                            </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="surname" class="hcard__label">Surname</label>
+                            <input type="text" class="hcard__input  form-control" id="surname" name="surname" data-ng-model="myApp.surname" />
                         </div>
-                    </fieldset>
-                    <fieldset class="hcard__form-group">
-                        <legend class="hcard__legend hcard__line">
-                            Address
-                        </legend>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <label for="house" class="hcard__label">House name or #</label>
-                                <input type="text" class="hcard__input  form-control" id="house" name="house" data-ng-model="myApp.house" />
-                            </div>
-                            <div class="col-xs-6">
-                                <label for="street" class="hcard__label">Street</label>
-                                <input type="text" class="hcard__input  form-control" id="street" name="street" data-ng-model="myApp.street" />
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="email" class="hcard__label">Email</label>
+                            <input type="email" class="hcard__input  form-control" id="email" name="email" data-ng-model="myApp.email" />
                         </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <label for="suburb" class="hcard__label">Suburb</label>
-                                <input type="text" class="hcard__input hcard__input--cap  form-control" id="suburb" name="suburb" data-ng-model="myApp.suburb" />
-                            </div>
-                            <div class="col-xs-6">
-                                <label for="state" class="hcard__label">State</label>
-                                <input type="text" class="hcard__input hcard__input--upper  form-control" id="state" name="state" data-ng-model="myApp.state" />
-                            </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="phone" class="hcard__label">Phone</label>
+                            <input type="text" class="hcard__input  form-control" id="phone" name="phone" maxlength="10" data-ng-model="myApp.phone" />
                         </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <label for="postcode" class="hcard__label">Postcode</label>
-                                <input type="text" class="hcard__input  form-control" id="postcode" name="postcode" data-ng-model="myApp.postcode" />
-                            </div>
-                            <div class="col-xs-6">
-                                <label for="country" class="hcard__label">Country</label>
-                                <input type="text" class="hcard__input  form-control" id="country" name="country" data-ng-model="myApp.country" />
-                            </div>
+                    </div>
+                </fieldset>
+                <fieldset class="hcard__form-group">
+                    <legend class="hcard__legend hcard__line">
+                        Address
+                    </legend>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="house" class="hcard__label">House name or #</label>
+                            <input type="text" class="hcard__input  form-control" id="house" name="house" data-ng-model="myApp.house" />
                         </div>
-                    </fieldset>
-                    <fieldset class="hcard__form-group">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <input type="file" class="hcard__btn hcard__btn--file  btn" id="upload" />
-                                <label for="upload" class="hcard__label hcard__label--file  btn">Upload Avatar</label>
-                            </div>
-                            <div class="col-xs-6">
-                                <button type="submit" class="hcard__btn hcard__btn--submit  btn">Create hCard</button>
-                            </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="street" class="hcard__label">Street</label>
+                            <input type="text" class="hcard__input  form-control" id="street" name="street" data-ng-model="myApp.street" />
                         </div>
-                    </fieldset>
-                </form>
-            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="suburb" class="hcard__label">Suburb</label>
+                            <input type="text" class="hcard__input hcard__input--cap  form-control" id="suburb" name="suburb" data-ng-model="myApp.suburb" />
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="state" class="hcard__label">State</label>
+                            <input type="text" class="hcard__input hcard__input--upper  form-control" id="state" name="state" data-ng-model="myApp.state" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="postcode" class="hcard__label">Postcode</label>
+                            <input type="text" class="hcard__input  form-control" id="postcode" name="postcode" data-ng-model="myApp.postcode" />
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="country" class="hcard__label">Country</label>
+                            <input type="text" class="hcard__input  form-control" id="country" name="country" data-ng-model="myApp.country" />
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="hcard__form-group">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <input type="file" class="hcard__btn hcard__btn--file  btn" id="upload" />
+                            <label for="upload" class="hcard__label hcard__label--file  btn">Upload Avatar</label>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <button type="submit" class="hcard__btn hcard__btn--submit  btn">Create hCard</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
         </div>
-        <div class="hcard-preview__side  col-md-6">
+        <div class="hcard-preview__side  col-xs-12 col-md-6" id="hcard-preview">
             <div class="hcard-preview  vcard">
                 <h2 class="hcard__title hcard__title--preview  text-right">Hcard preview</h2>
                 <div class="hcard-preview__name">
