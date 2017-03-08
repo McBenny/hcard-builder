@@ -2,7 +2,7 @@
 
 Here is my version of the technical test provided.
 
-I chose to build it with AngularJS (with `angular-seed`) as the main goal to achieve is data binding between the form and the card. I also embeded bootstrap for the css structure and built over it with my custom styles using the BEM notation. As I didn't have Photoshop on my machine, I created the default avatar by "screen printing" the PNG provided (the cropping is not perfect).  
+I chose to build it with AngularJS (with `angular-seed`) as the main goal to achieve is data binding between the form and the card. I also embedded bootstrap for the css structure and built over it with my custom styles using the BEM notation. As I didn't have Photoshop on my machine, I created the default avatar by "screen printing" the PNG provided (the cropping is not perfect).  
 I couldn't get my SASS compiler running on my machine so I just wrote the CSS directly.
 
 ##Installation
@@ -57,7 +57,7 @@ Now browse to the app at [`localhost:8000/index.html`][local-app-url].
 
 ## Directory Layout
 
-The HTML file presenting the app is in `app/view1/view1.html`,
-The custom styles are in `app/app.css`,
+The HTML file presenting the app is in `app/view1/view1.html`,  
+The custom styles are in `app/app.css`,  
 The custom scripts I added are in `app/view1/view1.js` (a filter and the image preview script),
 
